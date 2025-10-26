@@ -2,7 +2,7 @@
   <img src="assets/AppIcon.png" alt="xherpa Logo" width="128" height="128">
 </p>
 
-<h1 align="center">xherpa IT Dashboard for macOS</h1>
+<h1 align="center">Xherpa - IT Dashboard for macOS</h1>
 
 <p align="center">
   A lightweight, brandable IT dashboard for macOS.  
