@@ -11,7 +11,8 @@
 
 ---
 
-![Hero – System Info](screenshots/hero-dashboard.png)
+<p align="center"> ![Hero – System Info](screenshots/hero-dashboard.png)
+</p>
 
 ## Overview
 
