@@ -12,16 +12,16 @@
 
 ## Overview
 
-**Xherpa** provides a unified local interface for macOS diagnostics, compliance checks, and IT resources — all without elevated permissions or cloud dependencies.  
-It’s ideal for managed or air-gapped environments where transparency and consistency are key.
+**Xherpa** is a standalone macOS dashboard for system diagnostics, compliance visibility, and IT access — all without elevated permissions or cloud dependencies.  
+It’s designed for managed and offline environments that demand clarity, reliability, and simplicity.
 
 ---
 
 ## Page Overview
 
-### 🏠 Quick Links
-The main hub for IT portals, service links, and documentation.  
-Each button is configurable and can be rebranded for internal use.
+### Quick Links
+The entry point of the dashboard, providing one-click access to company portals, support documentation, and remote assistance tools.  
+All links are configurable and can be rebranded for internal use.
 
 <p align="center">
   <img src="screenshots/1.png" alt="Quick Links Page" width="500">
@@ -29,9 +29,9 @@ Each button is configurable and can be rebranded for internal use.
 
 ---
 
-### 💻 System Info
-Displays live system details like hostname, macOS version, uptime, RAM, and disk usage.  
-Helps identify performance or environment issues instantly.
+### System Info
+Displays core system information at a glance — including hostname, OS version, uptime, memory and storage usage, and timezone.  
+This allows users and IT staff to quickly assess performance and system health.
 
 <p align="center">
   <img src="screenshots/2.png" alt="System Info Page" width="500">
@@ -39,9 +39,9 @@ Helps identify performance or environment issues instantly.
 
 ---
 
-### 🔒 Security Status
-Summarises FileVault, SIP, Gatekeeper, MDM enrolment, and admin accounts.  
-All values are gathered from safe, read-only macOS utilities.
+### Security Status
+Summarises macOS security and compliance configuration, including SIP, FileVault, Gatekeeper, MDM enrolment, and user privileges.  
+All data is retrieved from system-safe read-only commands.
 
 <p align="center">
   <img src="screenshots/3.png" alt="Security Status Page" width="500">
@@ -49,9 +49,10 @@ All values are gathered from safe, read-only macOS utilities.
 
 ---
 
-### 🌐 Network
-Displays active interface, DNS, gateway, and basic connectivity tests.  
-Uses `networksetup`, `ping`, and `scutil` to validate local and external reachability.
+### Network
+Provides live network diagnostics showing interface status, DNS, and measured latency.  
+IP and gateway addresses are masked in screenshots for privacy.  
+Checks are performed locally using `networksetup`, `ping`, and `scutil`.
 
 <p align="center">
   <img src="screenshots/4.png" alt="Network Page" width="500">
@@ -59,42 +60,43 @@ Uses `networksetup`, `ping`, and `scutil` to validate local and external reachab
 
 ---
 
-### 🧰 Utilities
-Local diagnostic tools that run entirely in user space — fast, safe, and private.
+### Utilities
+A local toolset providing on-demand diagnostics and quick access to native macOS tools.  
+All modules operate in user mode — no administrative privileges required.
 
 <p align="center">
   <img src="screenshots/5.png" alt="Utilities Page" width="500">
 </p>
 
-#### **Available Utilities**
-| Tool | Description |
-|------|--------------|
-| **Terminal** | Opens macOS Terminal for advanced commands. |
-| **Screenshot** | Launches macOS’s built-in screenshot utility. |
-| **Disk Health** | Analyses volume layout, APFS health, and mount status. |
-| **Memory Info** | Displays live memory distribution and system pressure. |
-| **Port Scanner** | Verifies local and external network service reachability. |
-| **System Info** | Opens macOS System Information for in-depth reporting. |
+#### Available Utilities
+| Utility | Description |
+|----------|-------------|
+| Terminal | Opens the macOS Terminal for manual commands. |
+| Screenshot | Launches the built-in macOS Screenshot utility. |
+| Disk Health | Analyses APFS layout, free space, and filesystem health. |
+| Memory Info | Reports current memory pressure, allocation, and usage. |
+| Port Scanner | Verifies network connectivity and service availability. |
+| System Info | Opens the native System Information app. |
 
-##### **Disk Health**
-Checks APFS containers, available space, Spotlight status, and mount state using `diskutil`.  
-Displays clear indicators for health and accessibility.
+##### Disk Health
+Checks APFS containers, capacity, Spotlight status, and recent error logs using `diskutil`.  
+Reports volume health and filesystem accessibility.
 
 <p align="center">
   <img src="screenshots/DH1.png" alt="Disk Health Report" width="450">
 </p>
 
-##### **Memory Info**
-Uses `vm_stat` and internal metrics to show total, active, compressed, and wired memory.  
-Highlights memory pressure and available resources.
+##### Memory Info
+Uses `vm_stat` and system metrics to provide real-time breakdowns of active, inactive, wired, and compressed memory.  
+Includes pressure indicators and recommendations when utilisation is high.
 
 <p align="center">
   <img src="screenshots/MI1.png" alt="Memory Info Results" width="450">
 </p>
 
-##### **Port Scanner**
-Tests local and external ports (HTTP, HTTPS, DNS, SMTP, etc.) and reports connectivity results.  
-Confirms DNS and gateway responsiveness in real time.
+##### Port Scanner
+Tests key local and external ports (HTTP, HTTPS, DNS, SMTP, etc.) to confirm full connectivity.  
+Validates DNS resolution, gateway responsiveness, and outbound service reachability.
 
 <p align="center">
   <img src="screenshots/PS1.png" alt="Port Scanner Results" width="450">
@@ -102,14 +104,15 @@ Confirms DNS and gateway responsiveness in real time.
 
 ---
 
-### 🎨 Appearance
-Complete visual customisation through Xherpa’s built-in theme engine.
+### Appearance
+A fully customisable interface layer allowing live theming, skin randomisation, and user preset saving.  
+Themes are designed for clarity and subtle contrast — suitable for both light and dark workspaces.
 
 **Features**
-- **Choose Skin:** load from built-in professional presets  
-- **Customise:** adjust colour palettes and depth  
-- **Randomise:** instantly shuffle theme combinations  
-- **Save Skin:** persist preferred layouts for future sessions  
+- Choose Skin – load from built-in visual presets  
+- Customise – adjust colour, gradient, and depth  
+- Randomise – instantly shuffle theme combinations  
+- Save Skin – store personalised themes for reuse  
 
 <p align="center">
   <img src="screenshots/6.png" alt="Appearance Page" width="500">
@@ -118,19 +121,15 @@ Complete visual customisation through Xherpa’s built-in theme engine.
 #### Theme Variations
 
 <p align="center">
-  <img src="screenshots/theme1.png" alt="Theme 1" width="400">
-  <img src="screenshots/theme-2.png" alt="Theme 2" width="400"><br>
-  <img src="screenshots/theme-3.png" alt="Theme 3" width="400">
-  <img src="screenshots/theme-4-appearance.png" alt="Theme 4" width="400"><br>
-  <img src="screenshots/theme-5.png" alt="Theme 5" width="400">
-  <img src="screenshots/theme-6.png" alt="Theme 6" width="400"><br>
-  <img src="screenshots/theme-7.png" alt="Theme 7" width="400">
-  <img src="screenshots/theme-8.png" alt="Theme 8" width="400"><br>
-  <img src="screenshots/theme-9.png" alt="Theme 9" width="400">
+  <img src="screenshots/theme3.png" alt="Theme 3" width="400">
+  <img src="screenshots/theme4.png" alt="Theme 4" width="400"><br>
+  <img src="screenshots/theme5.png" alt="Theme 5" width="400">
+  <img src="screenshots/theme6.png" alt="Theme 6" width="400"><br>
+  <img src="screenshots/theme7.png" alt="Theme 7" width="400">
 </p>
 
-The UI features **physics-based behaviour** — windows can be “thrown” across the screen, bounce off edges, and subtly resize while moving.  
-This motion logic adds a tactile, lightweight feel that makes Xherpa distinct from static IT dashboards.
+Xherpa’s interface includes hidden **physics-driven behaviour** — windows can be “thrown” across the screen, bounce off edges, and dynamically resize while in motion.  
+This gives the UI a sense of weight and responsiveness uncommon in enterprise utilities.
 
 ---
 
@@ -138,41 +137,41 @@ This motion logic adds a tactile, lightweight feel that makes Xherpa distinct fr
 
 | Layer | Technologies | Description |
 |-------|--------------|-------------|
-| **UI** | SwiftUI + AppKit bridge | Native, modular macOS interface |
-| **Diagnostics** | Swift Concurrency + Process wrappers | Executes system utilities asynchronously |
-| **Data Handling** | Codable JSON | Local-only, no telemetry |
-| **Animation & Physics** | Core Animation | Real-time, physics-based UI motion |
-| **Theming** | Dynamic colour palette | Randomisable and persistent |
-| **Build** | Xcode Universal Binary | Unsigned, non-notarised `.app` |
+| UI | SwiftUI + AppKit bridge | Native, modular macOS interface |
+| Diagnostics | Swift Concurrency + Process wrappers | Runs asynchronous system queries safely |
+| Data Handling | Codable JSON | Local-only storage with zero telemetry |
+| Animation & Physics | Core Animation | Real-time, physics-based UI interactions |
+| Theming | Dynamic gradient engine | Randomisable colour and depth system |
+| Build | Xcode Universal Binary | Unsigned, non-notarised `.app` |
 
 ---
 
-## Security & Privacy
+## Security and Privacy
 
-- Local execution only  
-- No telemetry or external calls  
-- Read-only system queries  
-- Safe for MDM-managed Macs  
-- Fully offline operation  
+- Runs entirely offline  
+- No telemetry, tracking, or analytics  
+- Read-only system interactions  
+- MDM and enterprise-safe  
+- Sandboxed operation
 
 ---
 
 ## Development Notes
 
-- **Platform:** macOS 12.0+  
-- **Architecture:** Universal (Intel + Apple Silicon)  
-- **Size:** ≈4.5 MB  
-- **Memory Usage:** ≈10 MB  
-- **Notarisation:** Unsigned — internal/demo use  
+- Platform: macOS 12.0+  
+- Architecture: Universal (Intel and Apple Silicon)  
+- Size: ~4.5 MB  
+- Memory Usage: ~10 MB average  
+- Distribution: Unsigned `.app`, internal or manual install  
 
 ---
 
 ## Contact
 
-For documentation or collaboration:  
+For technical documentation or collaboration:  
 **cypherhunk@protonmail.com**
 
 ---
 
-*Xherpa is distributed for demonstration and educational purposes only.*  
-*The app is unsigned and not notarised for App Store distribution.*
+*Xherpa is provided for demonstration and educational purposes only.*  
+*This application is unsigned and not notarised for App Store distribution.*
