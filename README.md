@@ -126,6 +126,9 @@ Themes are designed for clarity and subtle contrast, suitable for both light and
   <img src="screenshots/theme5.png" alt="Theme 5" width="400">
   <img src="screenshots/theme6.png" alt="Theme 6" width="400"><br>
   <img src="screenshots/theme7.png" alt="Theme 7" width="400">
+  <img src="screenshots/theme6.png" alt="Theme 8" width="400"><br>
+  <img src="screenshots/theme7.png" alt="Theme 9" width="400">
+  <img src="screenshots/theme6.png" alt="Theme 10" width="400"><br>
 </p>
 
 The interface includes a set of lightweight physics-driven behaviours designed to make interaction feel natural and physical rather than static.  
