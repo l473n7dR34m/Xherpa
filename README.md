@@ -12,95 +12,177 @@
 ---
 
 <p align="center">
-  <img src="screenshots/hero-dashboard.png" alt="Hero – System Info" width="850">
+  <img src="screenshots/1.png" alt="Hero – Dashboard Overview" width="850">
 </p>
 
 ## Overview
 
-**Xherpa** is a macOS application providing real-time system diagnostics, compliance checks, and instant access to IT resources — all from a single local interface.  
-It’s designed for environments where transparency and simplicity matter, without requiring network connectivity or admin privileges.
+**Xherpa** is a macOS application providing local system diagnostics, compliance checks, and fast access to IT resources — all without requiring network connectivity or admin privileges.  
+It’s built for managed environments where transparency and usability are key, offering immediate visibility into system health and support readiness.
 
 ---
 
 ## Key Features
 
 ### Self-Service Diagnostics
-- Real-time CPU, RAM, and disk usage  
-- System uptime, macOS version, and hardware info  
-- Local-only diagnostic output with no data transmission  
+- Real-time system metrics and health overview  
+- No admin rights or elevated access required  
+- Read-only system interaction — safe in all environments  
 
 ### IT Access Hub
-- Configurable quick links to internal tools and portals  
-- Launches scripts, support URLs, or documentation  
-- Single configuration file for easy enterprise branding  
+- Quick navigation to IT portals, helpdesk, or remote support  
+- Configurable JSON-based layout for full customisation  
+- Persistent helpdesk shortcut available on every screen  
 
 ### Security & Compliance
-- Displays FileVault, SIP, Gatekeeper, and MDM status  
-- Read-only checks for encryption and device management  
-- Designed for visibility, not enforcement or policy control  
+- Displays FileVault, SIP, MDM, and Gatekeeper status  
+- Shows enrolled device state without policy modification  
+- Helps end users verify their system is compliant before escalation  
 
-### Network Diagnostics
-- Displays local IP configuration, DNS servers, and latency  
-- Built-in reachability and speed test tools  
-- No network logging or external service dependency  
-
-<p align="center">
-  <img src="screenshots/network.png" alt="Network Diagnostics" width="450">
-  <img src="screenshots/security-status.png" alt="Security Compliance" width="450">
-</p>
+### Dynamic Interface
+- Modular six-page layout with arrow-based navigation  
+- Built-in motion physics for interactive window behaviour  
+- Fully themable — appearance can be customised, saved, and randomised  
 
 ---
 
-## Built-in Utilities
+## Dashboard Overview
 
-Each utility runs safely in user space using system tools and APIs.
-
-| Utility | Description | Screenshot |
-|----------|--------------|-------------|
-| **Port Scanner** | Scans open TCP ports on a target host for quick connectivity testing. | <img src="screenshots/port-scanner-results.png" width="300"> |
-| **Memory Test** | Runs a short stress test and shows free/used memory at a glance. | <img src="screenshots/memory-test-results.png" width="300"> |
-| **Disk Health** | Reads disk usage and SMART status using built-in `diskutil`. | <img src="screenshots/disk-health-results.png" width="300"> |
-| **System Report** | Opens the macOS **System Information** app directly for full hardware and software reporting. | <img src="screenshots/system-info.png" width="300"> |
+Xherpa’s dashboard is divided into six pages, each dedicated to a different aspect of system visibility and IT access.
 
 ---
 
-## Appearance & Themes
-
-The **Appearance** module provides a custom theme engine allowing users to tailor Xherpa’s look to their workspace or corporate brand.
-
-### Features:
-- **Randomise Theme** – instantly switches between curated colour palettes and layout variants  
-- **Save Preset** – store and reload preferred theme configurations  
-- **Live Editor** – adjust accent hues, window transparency, and module layout  
-- **Professional Defaults** – includes 11 accessible, high-contrast options  
-- **Real-time Preview** – visual changes update immediately across panels  
-
+### 1. Quick Links
 <p align="center">
-  <img src="screenshots/appearance.png" alt="Appearance Module" width="500">
+  <img src="screenshots/1.png" alt="Quick Links Page" width="450">
 </p>
 
+Central hub for IT resources and web tools. Each button is customisable via a JSON configuration file.
+
+**Default entries include:**
+- Homepage  
+- Remote Support  
+- Company Portal  
+- Latest Bulletin  
+- IT Policies  
+- Service Catalogue  
+- Go to IT Helpdesk (persistent shortcut)
+
+Links can point to internal portals, SharePoint pages, or support URLs.
+
+---
+
+### 2. System Info
 <p align="center">
-  <img src="screenshots/theme1.png" alt="Theme 1" width="400">
-  <img src="screenshots/theme-2.png" alt="Theme 2" width="400">
+  <img src="screenshots/2.png" alt="System Info Page" width="450">
 </p>
 
+Displays live system information to assist with diagnostics and ticket triage.
+
+**Shows:**
+- Hostname and current user  
+- macOS version and build number  
+- Time zone and current time  
+- System uptime  
+- RAM and storage usage (live readouts)
+
+All data is gathered locally using built-in macOS commands like `system_profiler` and `vm_stat`.
+
+---
+
+### 3. Security Status
 <p align="center">
-  <img src="screenshots/theme-3.png" alt="Theme 3" width="400">
-  <img src="screenshots/theme-4-appearance.png" alt="Theme 4 Appearance" width="400">
+  <img src="screenshots/3.png" alt="Security Status Page" width="450">
 </p>
+
+Provides instant visibility into core macOS protection features and management status.
+
+**Includes:**
+- SIP (System Integrity Protection)  
+- FileVault (encryption status)  
+- MDM enrollment  
+- VPN connectivity  
+- Gatekeeper and SSH states  
+- Admin users and update policies  
+
+Designed for clarity during compliance checks or troubleshooting sessions.
+
+---
+
+### 4. Network
+<p align="center">
+  <img src="screenshots/4.png" alt="Network Page" width="450">
+</p>
+
+Summarises local and external connectivity status.
+
+**Displays:**
+- Active network interface (Wi-Fi or Ethernet)  
+- IP configuration, gateway, and DNS  
+- Upload/download throughput  
+- Latency (Ping) and connection status  
+
+All tests run locally using macOS utilities such as `networksetup`, `scutil`, and `ping`.  
+No external services or data uploads are involved.
+
+---
+
+### 5. Utilities
+<p align="center">
+  <img src="screenshots/5.png" alt="Utilities Page" width="450">
+</p>
+
+A suite of local diagnostic tools to support first-line troubleshooting.  
+Each runs safely in user space and requires no elevated permissions.
+
+#### • Terminal
+Launches the macOS Terminal app for command-line diagnostics.  
+
+#### • Screenshot
+Opens the native Screenshot utility (`Command + Shift + 5` equivalent).  
+
+#### • Disk Health
+Displays current disk usage and SMART status using `diskutil` and `df`.  
+
+#### • Memory Info
+Shows total, used, and free memory with data from `vm_stat`.  
+
+#### • Port Scanner
+Runs a lightweight TCP port scan on a chosen target host using Swift concurrency and native networking calls.  
+
+#### • System Info
+Opens the **System Information.app** for detailed hardware and software reports.
+
+---
+
+### 6. Appearance
+<p align="center">
+  <img src="screenshots/6.png" alt="Appearance Page" width="450">
+</p>
+
+Defines the visual and layout style of Xherpa.  
+Themes can be customised, randomised, or saved for reuse.
+
+**Options:**
+- **Choose Skin** – select from curated default themes  
+- **Customise** – adjust colours, gradient, and layout style  
+- **Randomise** – shuffle between palette and theme variations instantly  
+- **Save Skin** – store current configuration for persistence  
+
+Changes apply immediately across all modules and remain between sessions.
 
 ---
 
 ## Hidden Physics Behaviour
 
-Beyond its practical dashboard features, **Xherpa** includes subtle motion logic for an interactive desktop feel.
+While primarily functional, Xherpa’s interface includes subtle motion and interaction effects for a tactile desktop experience:
 
-- **Throw & Bounce:** the main window can be “thrown” across the screen and will bounce softly off edges.  
-- **Dynamic Resizing:** the window dynamically expands or contracts slightly while being moved, simulating depth and weight.  
-- **Momentum Decay:** motion eases out naturally, using velocity-based damping curves.  
-- **Elastic Boundaries:** subtle scaling when colliding with screen edges, creating a tactile physics effect.
+- **Throw & Bounce:** the main window can be “thrown” across the screen and bounces off edges with realistic deceleration.  
+- **Dynamic Resizing:** panels subtly scale during movement, creating a sense of physical weight.  
+- **Momentum Decay:** motion slows naturally based on velocity and screen boundary resistance.  
+- **Elastic Edges:** collisions trigger soft compression and rebound for a satisfying visual response.  
 
-These details don’t affect functionality but add a satisfying, tactile responsiveness uncommon in standard macOS utilities.
+These features are purely aesthetic — they don’t affect performance but make Xherpa feel organic and responsive.
 
 ---
 
@@ -110,11 +192,11 @@ These details don’t affect functionality but add a satisfying, tactile respons
 |-----------|--------------------|----------|
 | **System Health** | `system_profiler`, `ioreg`, `psutil` bridge | Hardware, process, and performance data |
 | **Network** | `networksetup`, `ping`, `traceroute`, `scutil`, `ifconfig` | Network, DNS, and gateway diagnostics |
-| **Security & Compliance** | `fdesetup`, `profiles`, `mdmclient`, `csrutil` | FileVault, MDM, and system protection status |
+| **Security & Compliance** | `fdesetup`, `profiles`, `mdmclient`, `csrutil` | Reads FileVault, MDM, and protection status |
 | **Disk & Memory** | `diskutil`, `df`, `vm_stat` | Storage and memory statistics |
-| **Reporting** | Launches macOS System Information app | Detailed hardware/software reporting |
+| **Reporting** | Launches macOS System Information | Opens native detailed report interface |
 
-All operations are **read-only**, local, and safe for use in managed enterprise environments.
+All commands execute in **read-only** mode, ensuring safety in managed environments.
 
 ---
 
@@ -122,13 +204,13 @@ All operations are **read-only**, local, and safe for use in managed enterprise 
 
 | Layer | Technologies Used | Description |
 |-------|-------------------|-------------|
-| **UI Layer** | SwiftUI + AppKit bridge | Native interface with flexible layout and theme engine |
-| **Diagnostics Engine** | Swift Concurrency + Process wrappers | Executes local system commands safely |
-| **Data Handling** | Codable JSON structures | Efficient local parsing and exports |
-| **Animation & Physics** | Core Animation, custom easing, velocity decay | Provides dynamic motion and tactile feedback |
-| **Packaging** | Xcode Universal Binary | Unsigned, non-notarised `.app` for manual installation |
+| **UI Layer** | SwiftUI + AppKit bridge | Native macOS interface with modular layout |
+| **Diagnostics Engine** | Swift Concurrency + Process wrappers | Executes local system utilities safely |
+| **Data Handling** | Codable JSON structures | Local parsing and export |
+| **Animation & Physics** | Core Animation, velocity damping, inertia | Provides interactive motion behaviour |
+| **Packaging** | Xcode Universal Binary | Unsigned, non-notarised `.app` bundle for manual deployment |
 
-> **Note:** This build is unsigned and not notarised. Intended for demonstration or internal distribution.
+> **Note:** This build is unsigned and not notarised. Intended for demonstration or internal deployment.
 
 ---
 
@@ -139,14 +221,14 @@ All operations are **read-only**, local, and safe for use in managed enterprise 
 - **Memory Footprint:** ~10 MB  
 - **Architecture:** Universal (Intel + Apple Silicon)  
 - **Permissions:** None required beyond user space  
-- **Network:** Fully local execution  
-- **Distribution:** Manual, MDM, or internal deployment  
+- **Network:** Fully offline, local execution  
+- **Distribution:** Manual or via MDM tools (Jamf, Intune)
 
 ---
 
 ## Contact
 
-For technical collaboration or documentation:  
+For technical documentation or collaboration:  
 **cypherhunk@protonmail.com**
 
 ---
