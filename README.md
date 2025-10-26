@@ -163,7 +163,7 @@ This responsiveness gives Xherpa a tangible sense of weight and motion, combinin
 ## Development Notes
 
 - Platform: macOS 12.0+  
-- Architecture: Universal (Intel and Apple Silicon)  
+- Architecture: Apple Silicon  
 - Size: ~4.5 MB  
 - Memory Usage: ~10 MB average  
 - Distribution: Unsigned `.app`, internal or manual install  
