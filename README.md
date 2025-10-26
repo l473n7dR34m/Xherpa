@@ -2,148 +2,169 @@
   <img src="assets/AppIcon.png" alt="xherpa Logo" width="128" height="128">
 </p>
 
-# xherpa IT Dashboard for macOS
+<h1 align="center">xherpa IT Dashboard for macOS</h1>
 
-Enterprise-ready IT dashboard that gives employees instant access to system diagnostics and IT resources. Available for customisation and deployment in your organisation.
+<p align="center">
+  A lightweight, brandable IT dashboard for macOS.  
+  Designed for system visibility, diagnostics, and quick IT access.
+</p>
+
+---
 
 ![Hero – System Info](screenshots/hero-dashboard.png)
 
 ## Overview
 
-xherpa is a lightweight macOS application designed to reduce IT ticket volume by empowering users with self-service diagnostics and direct access to IT resources.
-
-**Deployed at Fliteboard** · **200+ active users** · **75% reduction in basic support tickets**
+xherpa is a macOS application that provides local system diagnostics, compliance checks, and quick access to IT resources — all without requiring admin rights or internet access.  
+It’s designed for technical environments where transparency, consistency, and local-only operation are key.
 
 ---
 
-## Key features
+## Key Features
 
-### Self-service diagnostics
-- Real-time system health monitoring  
-- Network connectivity testing  
-- Security compliance checks  
-- One-click diagnostic reports
+### Self-Service Diagnostics
+- Real-time system health overview  
+- Network connectivity and latency checks  
+- Security and compliance validation  
+- One-click diagnostic summaries
 
-### Instant IT access
-- Direct links to help desk  
-- Quick access to IT policies  
-- Remote support integration  
-- Service catalogue shortcuts
+### IT Access Hub
+- Quick access to IT policies and helpdesk portals  
+- Remote support shortcuts  
+- Configurable launch points for internal tools
 
-### White-label ready
-- Fully customisable branding  
-- 11 pre-built professional themes  
-- Corporate colour schemes  
-- Adjustable UI elements
+### White-Label Ready
+- Customisable branding, icons, and colour schemes  
+- Adjustable layout modules  
+- Optional organisation-specific themes
 
-### Enterprise security
+### Security & Privacy
 - No admin privileges required  
-- MDM-aware functionality  
-- Local data only (no cloud storage)  
-- Read-only system access
+- Local-only data handling (no telemetry or cloud storage)  
+- Read-only system queries  
+- MDM-aware behaviour for managed devices
 
 ---
 
-## Benefits for your organisation
+## Internal macOS Tools & Diagnostics
 
-| For IT Departments | For End Users | For Management |
-|---|---|---|
-| 75% fewer “check my system” tickets | Instant system visibility | Reduced IT operational costs |
-| Standardised diagnostics across fleet | Self-service troubleshooting | Improved employee productivity |
-| Quick deployment via MDM | One-click IT resources | Better security compliance |
-| Zero maintenance required | No Terminal knowledge needed | Real-time compliance status |
+xherpa uses native Apple frameworks and shell utilities for safe, local analysis.
+
+| Category | Tools / Frameworks | Purpose |
+|-----------|--------------------|----------|
+| **System Health** | `system_profiler`, `ioreg`, `psutil` bridge | Collects hardware, process, and performance data |
+| **Network** | `networksetup`, `ping`, `traceroute`, `scutil`, `ifconfig` | Performs network, DNS, and gateway checks |
+| **Security & Compliance** | `fdesetup`, `profiles`, `mdmclient`, `csrutil` | Reads FileVault, MDM, and security configuration states |
+| **Disk & Memory** | `diskutil`, `df`, `vm_stat` | Gathers storage and memory usage data |
+| **Reporting** | Local JSON and Markdown logs | Generates readable diagnostic exports |
+
+All commands are executed in **read-only mode** and are sandboxed to prevent configuration changes.
 
 ---
 
-## Use cases
+## Technology Stack
 
-### Remote workforce support
-![Network Diagnostics](screenshots/network.png)
-- VPN status checking  
-- Network speed testing  
-- Gateway/DNS verification  
-- Connectivity troubleshooting
+xherpa is built natively for macOS using Swift and standard Apple frameworks.
 
-### Security compliance
-![Security Status](screenshots/security-status.png)
-- FileVault encryption status  
-- MDM enrolment verification  
-- Security settings audit  
-- Update compliance checks
+| Layer | Technologies Used | Description |
+|-------|-------------------|--------------|
+| **UI Layer** | SwiftUI + AppKit bridge | Modern native interface with animated panels and dynamic themes |
+| **Diagnostics Engine** | Swift Concurrency + Process wrappers | Runs system utilities and parses structured output |
+| **Data Handling** | Codable JSON structures | Local-only storage and exports |
+| **Animation & Layout** | Core Animation, GeometryReader | Responsive and fluid macOS-native interface |
+| **Theming System** | Dynamic colour palette and gradients | Supports multiple professional themes |
+| **Build & Packaging** | Xcode Universal Binary | Unsigned, non-notarised `.app` bundle for manual deployment |
 
-### Built-in utilities
+---
+
+## Development Notes
+
+- **Platform:** macOS 12.0+  
+- **Binary Size:** ~4.5 MB (Universal Binary)  
+- **Memory Footprint:** ~10 MB average  
+- **Operation:** Fully offline, local execution  
+- **Permissions:** No elevated privileges required  
+- **Compatibility:** Intel & Apple Silicon  
+
+---
+
+## Built-in Utilities
+
 <p align="center">
-  <img src="screenshots/port-scanner-results.png" alt="Port Scanner Results" width="320">
-  <img src="screenshots/memory-test-results.png" alt="Memory Test Results" width="320">
+  <img src="screenshots/port-scanner-results.png" alt="Port Scanner Results" width="300">
+  <img src="screenshots/memory-test-results.png" alt="Memory Test Results" width="300">
+  <img src="screenshots/disk-health-results.png" alt="Disk Health Results" width="300">
 </p>
 
 ---
 
-## Technical specifications
-
-- **Platform:** macOS 12.0+  
-- **Size:** < 5 MB application  
-- **Memory:** ~ 10 MB runtime footprint  
-- **Architecture:** Native SwiftUI/AppKit  
-- **Deployment:** Standalone .app bundle (MDM-ready)  
-- **Permissions:** Optional (for enhanced window/UX features only)
-
----
-
-## Professional themes
+## Professional Themes
 
 ![Themes Showcase](screenshots/themes-showcase.png)
 
-Choose from 11 pre-built themes or supply brand colours to match your organisation’s identity.
+### Theme Variations
+
+<p align="center">
+  <img src="screenshots/theme1.png" alt="Theme 1" width="400">
+  <img src="screenshots/theme-2.png" alt="Theme 2" width="400">
+</p>
+
+<p align="center">
+  <img src="screenshots/theme-3.png" alt="Theme 3" width="400">
+  <img src="screenshots/theme-4-appearance.png" alt="Theme 4 Appearance" width="400">
+</p>
 
 ---
 
-## Available for your organisation
+## Feature Gallery
 
-xherpa can be tailored to your environment:
+<p align="center">
+  <img src="screenshots/all-screens.png" alt="All Modules Overview" width="850">
+</p>
 
-- **Branded version** – your logo, colours, and design  
-- **Custom links** – point to your IT systems and KBs  
-- **Additional tools** – environment-specific diagnostics  
-- **API integration** – connect to your monitoring stack  
-- **Managed deployment** – Jamf/Kandji/Intune packages
+<p align="center">
+  <img src="screenshots/network.png" alt="Network Diagnostics" width="400">
+  <img src="screenshots/security-status.png" alt="Security Compliance" width="400">
+</p>
 
----
+<p align="center">
+  <img src="screenshots/system-info.png" alt="System Info Module" width="400">
+  <img src="screenshots/utilities.png" alt="IT Utilities Module" width="400">
+</p>
 
-## Screenshots
-
-<details>
-<summary>View all feature screens</summary>
-
-### Quick Links
-![Quick Links](screenshots/quick-links.png)
-
-### System Information
-![System Info](screenshots/system-info.png)
-
-### Security Status
-![Security Status](screenshots/security-status.png)
-
-### Network Diagnostics
-![Network](screenshots/network.png)
-
-### IT Utilities
-![Utilities](screenshots/utilities.png)
-
-### Appearance / Themes
-![Appearance](screenshots/appearance.png)
-
-</details>
+<p align="center">
+  <img src="screenshots/appearance.png" alt="Appearance and Customisation" width="400">
+  <img src="screenshots/quick-links.png" alt="Quick Links" width="400">
+</p>
 
 ---
 
-## Contact for demo
+## In Action
 
-For enterprise licensing and customisation:  
-**Ryan Bullivant**  
-your.email@domain.com  
-LinkedIn: https://www.linkedin.com/in/your-handle
+<p align="center">
+  <img src="screenshots/port-scanner-results.png" alt="Port Scanner Results" width="400">
+  <img src="screenshots/memory-test-results.png" alt="Memory Test Results" width="400">
+</p>
 
 ---
 
-*xherpa is proprietary software developed for enterprise IT departments. Contact for licensing and customisation options.*
+## Availability
+
+xherpa can be customised for internal or enterprise deployment:
+
+- **Branding** – replace icon, colours, and name  
+- **Custom integrations** – link to internal KBs or tools  
+- **Extended diagnostics** – add environment-specific scripts  
+- **Deployment** – distribute via Jamf, Intune, or manual install  
+
+---
+
+## Contact
+
+For technical documentation or collaboration:  
+cypherhunk@protonmail.com
+
+---
+
+*xherpa is distributed for demonstration and educational purposes only.  
+The software is not notarised or signed for public macOS distribution.*
