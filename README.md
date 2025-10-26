@@ -117,10 +117,6 @@ xherpa is built natively for macOS using Swift and standard Apple frameworks.
 ## Feature Gallery
 
 <p align="center">
-  <img src="screenshots/all-screens.png" alt="All Modules Overview" width="850">
-</p>
-
-<p align="center">
   <img src="screenshots/network.png" alt="Network Diagnostics" width="400">
   <img src="screenshots/security-status.png" alt="Security Compliance" width="400">
 </p>
