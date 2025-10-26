@@ -100,8 +100,6 @@ xherpa is built natively for macOS using Swift and standard Apple frameworks.
 
 ## Professional Themes
 
-![Themes Showcase](screenshots/themes-showcase.png)
-
 ### Theme Variations
 
 <p align="center">
