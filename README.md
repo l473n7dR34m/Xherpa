@@ -169,8 +169,7 @@ Beyond standard UI transitions, **Xherpa** includes subtle physics-based interac
 
 - **Throw & Bounce:** the window can be flicked across the screen and rebounds off edges.  
 - **Dynamic Resizing:** the window scales slightly when moved, creating depth and motion.  
-- **Momentum Decay:** motion slows naturally based on velocity and friction.  
-- **Elastic Edges:** collisions cause soft compression and rebound.  
+- **Momentum Decay:** motion slows naturally based on velocity and friction.
 
 These behaviours are purely aesthetic and do not impact performance, but add a natural sense of movement and weight.
 
@@ -218,7 +217,6 @@ All commands execute locally in **read-only mode**.
 
 ## Contact
 
-For documentation or collaboration:  
 **cypherhunk@protonmail.com**
 
 ---
