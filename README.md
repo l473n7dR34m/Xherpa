@@ -12,8 +12,8 @@
 
 ## Overview
 
-**Xherpa** is a standalone macOS dashboard for system diagnostics, compliance visibility, and IT access — all without elevated permissions or cloud dependencies.  
-It’s designed for managed and offline environments that demand clarity, reliability, and simplicity.
+**Xherpa** is a standalone macOS dashboard for system diagnostics, compliance visibility, and IT access, without elevated permissions or cloud dependencies.  
+It is designed for managed and offline environments that demand clarity, reliability, and simplicity.
 
 ---
 
@@ -30,7 +30,7 @@ All links are configurable and can be rebranded for internal use.
 ---
 
 ### System Info
-Displays core system information at a glance — including hostname, OS version, uptime, memory and storage usage, and timezone.  
+Displays core system information at a glance, including hostname, OS version, uptime, memory and storage usage, and timezone.  
 This allows users and IT staff to quickly assess performance and system health.
 
 <p align="center">
@@ -41,7 +41,7 @@ This allows users and IT staff to quickly assess performance and system health.
 
 ### Security Status
 Summarises macOS security and compliance configuration, including SIP, FileVault, Gatekeeper, MDM enrolment, and user privileges.  
-All data is retrieved from system-safe read-only commands.
+All data is retrieved from system-safe, read-only commands.
 
 <p align="center">
   <img src="screenshots/3.png" alt="Security Status Page" width="500">
@@ -62,7 +62,7 @@ Checks are performed locally using `networksetup`, `ping`, and `scutil`.
 
 ### Utilities
 A local toolset providing on-demand diagnostics and quick access to native macOS tools.  
-All modules operate in user mode — no administrative privileges required.
+All modules operate in user mode; no administrative privileges are required.
 
 <p align="center">
   <img src="screenshots/5.png" alt="Utilities Page" width="500">
@@ -95,7 +95,7 @@ Includes pressure indicators and recommendations when utilisation is high.
 </p>
 
 ##### Port Scanner
-Tests key local and external ports (HTTP, HTTPS, DNS, SMTP, etc.) to confirm full connectivity.  
+Tests key local and external ports (HTTP, HTTPS, DNS, SMTP, and others) to confirm full connectivity.  
 Validates DNS resolution, gateway responsiveness, and outbound service reachability.
 
 <p align="center">
@@ -106,7 +106,7 @@ Validates DNS resolution, gateway responsiveness, and outbound service reachabil
 
 ### Appearance
 A fully customisable interface layer allowing live theming, skin randomisation, and user preset saving.  
-Themes are designed for clarity and subtle contrast — suitable for both light and dark workspaces.
+Themes are designed for clarity and subtle contrast, suitable for both light and dark workspaces.
 
 **Features**
 - Choose Skin – load from built-in visual presets  
@@ -128,8 +128,9 @@ Themes are designed for clarity and subtle contrast — suitable for both light 
   <img src="screenshots/theme7.png" alt="Theme 7" width="400">
 </p>
 
-Xherpa’s interface includes hidden **physics-driven behaviour** — windows can be “thrown” across the screen, bounce off edges, and dynamically resize while in motion.  
-This gives the UI a sense of weight and responsiveness uncommon in enterprise utilities.
+The interface includes a set of lightweight physics-driven behaviours designed to make interaction feel natural and physical rather than static.  
+Windows respond to velocity and inertia when dragged, allowing them to be thrown across the screen. They decelerate, bounce off display edges, and subtly deform or resize dynamically while in motion.  
+This responsiveness gives Xherpa a tangible sense of weight and motion, combining professional utility with a level of physical realism more often found in creative applications than IT dashboards.
 
 ---
 
@@ -140,7 +141,7 @@ This gives the UI a sense of weight and responsiveness uncommon in enterprise ut
 | UI | SwiftUI + AppKit bridge | Native, modular macOS interface |
 | Diagnostics | Swift Concurrency + Process wrappers | Runs asynchronous system queries safely |
 | Data Handling | Codable JSON | Local-only storage with zero telemetry |
-| Animation & Physics | Core Animation | Real-time, physics-based UI interactions |
+| Animation and Physics | Core Animation | Real-time, physics-based UI interactions |
 | Theming | Dynamic gradient engine | Randomisable colour and depth system |
 | Build | Xcode Universal Binary | Unsigned, non-notarised `.app` |
 
@@ -168,10 +169,6 @@ This gives the UI a sense of weight and responsiveness uncommon in enterprise ut
 
 ## Contact
 
-For technical documentation or collaboration:  
 **cypherhunk@protonmail.com**
 
 ---
-
-*Xherpa is provided for demonstration and educational purposes only.*  
-*This application is unsigned and not notarised for App Store distribution.*
